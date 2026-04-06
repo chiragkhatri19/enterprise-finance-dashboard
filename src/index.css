@@ -79,6 +79,7 @@
 
     --z-glow-left: rgba(61,110,250,0.10);
     --z-glow-right: rgba(20,217,164,0.07);
+    --z-card-highlight: rgba(255,255,255,0.15);
 
     --sidebar-background: 222 50% 8%;
     --sidebar-foreground: 220 60% 97%;
@@ -92,77 +93,78 @@
 
   /* ─── LIGHT MODE ──────────────────────────── */
   .light {
-    --background: 220 20% 97%;
-    --foreground: 222 40% 12%;
+    --background: 220 33% 98%;
+    --foreground: 222 47% 11%;
     --card: 0 0% 100%;
-    --card-foreground: 222 40% 12%;
+    --card-foreground: 222 47% 11%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222 40% 12%;
-    --primary: 224 80% 45%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 221 83% 53%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 162 60% 40%;
+    --secondary: 162 59% 41%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 220 14% 92%;
-    --muted-foreground: 220 15% 46%;
-    --accent: 220 14% 92%;
-    --accent-foreground: 222 40% 12%;
-    --destructive: 0 70% 55%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 220 14% 88%;
-    --input: 220 14% 88%;
-    --ring: 224 80% 50%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
 
-    --z-bg-base: #F8FAFC;
+    --z-bg-base: #F4F7FB;
     --z-bg-surface: #FFFFFF;
-    --z-bg-surface-2: #F1F5F9;
+    --z-bg-surface-2: #EDF2F7;
     --z-bg-surface-3: #E2E8F0;
-    --z-bg-nav: rgba(255, 255, 255, 0.8);
+    --z-bg-nav: rgba(255, 255, 255, 0.9);
     --z-bg-hover: #F1F5F9;
-    --z-bg-input: #F8FAFC;
-    --z-bg-shell: #F8FAFC;
+    --z-bg-input: #FFFFFF;
+    --z-bg-shell: #F4F7FB;
 
-    --z-border: rgba(15, 23, 42, 0.08);
-    --z-border-medium: rgba(15, 23, 42, 0.12);
-    --z-border-strong: rgba(15, 23, 42, 0.16);
-    --z-border-accent: rgba(37, 99, 235, 0.2);
+    --z-border: rgba(15, 23, 42, 0.12);
+    --z-border-medium: rgba(15, 23, 42, 0.18);
+    --z-border-strong: rgba(15, 23, 42, 0.24);
+    --z-border-accent: rgba(37, 99, 235, 0.25);
 
     --z-text-primary: #0F172A;
-    --z-text-secondary: #475569;
-    --z-text-muted: #94A3B8;
-    --z-text-dim: #CBD5E1;
-    --z-text-disabled: #E2E8F0;
+    --z-text-secondary: #334155;
+    --z-text-muted: #64748B;
+    --z-text-dim: #94A3B8;
+    --z-text-disabled: #CBD5E1;
 
     --z-accent: #2563EB;
-    --z-accent-hover: #3B82F6;
-    --z-accent-dark: #1D4ED8;
-    --z-accent-muted: rgba(37, 99, 235, 0.08);
-    --z-accent-glow: rgba(37, 99, 235, 0.15);
+    --z-accent-hover: #1D4ED8;
+    --z-accent-dark: #1E40AF;
+    --z-accent-muted: rgba(37, 99, 235, 0.1);
+    --z-accent-glow: rgba(37, 99, 235, 0.2);
 
-    --z-teal: #10B981;
-    --z-teal-muted: rgba(16, 185, 129, 0.08);
-    --z-violet: #8B5CF6;
-    --z-red: #EF4444;
-    --z-yellow: #F59E0B;
-    --z-green: #10B981;
-    --z-green-bg: rgba(16, 185, 129, 0.08);
-    --z-red-bg: rgba(239, 68, 68, 0.08);
-    --z-yellow-bg: rgba(245, 158, 11, 0.08);
-    --z-green-glow: rgba(16, 185, 129, 0.15);
+    --z-teal: #059669;
+    --z-teal-muted: rgba(5, 150, 105, 0.1);
+    --z-violet: #7C3AED;
+    --z-red: #DC2626;
+    --z-yellow: #D97706;
+    --z-green: #059669;
+    --z-green-bg: rgba(5, 150, 105, 0.1);
+    --z-red-bg: rgba(220, 38, 38, 0.1);
+    --z-yellow-bg: rgba(217, 119, 6, 0.1);
+    --z-green-glow: rgba(5, 150, 105, 0.15);
 
-    --z-chart-grid: rgba(15, 23, 42, 0.06);
+    --z-chart-grid: rgba(15, 23, 42, 0.08);
     --z-chart-tooltip-bg: #FFFFFF;
-    --z-chart-tooltip-border: rgba(15, 23, 42, 0.1);
+    --z-chart-tooltip-border: rgba(15, 23, 42, 0.15);
 
-    --z-shadow-card: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
-    --z-shadow-elevated: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
-    --z-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-    --z-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-    --z-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
-    --z-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.09), 0 8px 10px -6px rgba(0, 0, 0, 0.06);
-    --z-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    --z-shadow-card: 0 2px 8px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(0, 0, 0, 0.01);
+    --z-shadow-elevated: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    --z-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --z-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+    --z-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    --z-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --z-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 
     --z-glow-left: rgba(37, 99, 235, 0.06);
     --z-glow-right: rgba(16, 185, 129, 0.05);
+    --z-card-highlight: rgba(15, 23, 42, 0.05);
 
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 222 40% 12%;

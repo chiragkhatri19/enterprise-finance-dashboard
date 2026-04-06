@@ -40,13 +40,11 @@ export function InsightsStrip() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 + i * 0.03, duration: 0.2 }}
-          className="rounded-xl border px-4 py-3 flex items-center gap-3 theme-transition relative"
+          className="rounded-xl border px-4 py-3 flex items-center gap-3 theme-transition relative overflow-hidden"
           style={{ 
-            background: "rgba(255,255,255,0.03)",
-            backdropFilter: "blur(12px) saturate(140%)",
-            WebkitBackdropFilter: "blur(12px) saturate(140%)",
-            borderColor: "rgba(255,255,255,0.08)",
-            boxShadow: "0 2px 8px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.05)"
+            background: "var(--z-bg-surface)",
+            borderColor: "var(--z-border)",
+            boxShadow: "var(--z-shadow-card)"
           }}
         >
           
@@ -54,7 +52,7 @@ export function InsightsStrip() {
           <div 
             className="absolute top-0 left-0 right-0 h-px"
             style={{
-              background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%)"
+              background: "linear-gradient(90deg, transparent 0%, var(--z-card-highlight) 50%, transparent 100%)"
             }}
           />
           <div 
