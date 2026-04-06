@@ -81,6 +81,10 @@
     --z-glow-right: rgba(20,217,164,0.07);
     --z-card-highlight: rgba(255,255,255,0.15);
 
+    --z-noise-opacity: 0.05;
+    --z-noise-blend: overlay;
+    --z-grid-opacity: 0.08;
+
     --sidebar-background: 222 50% 8%;
     --sidebar-foreground: 220 60% 97%;
     --sidebar-primary: 224 95% 62%;
@@ -93,16 +97,16 @@
 
   /* ─── LIGHT MODE ──────────────────────────── */
   .light {
-    --background: 220 33% 98%;
-    --foreground: 222 47% 11%;
+    --background: 210 20% 98%;
+    --foreground: 224 71% 4%;
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 224 71% 4%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-    --primary: 221 83% 53%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 162 59% 41%;
-    --secondary-foreground: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+    --primary: 222 47% 11%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
     --accent: 210 40% 96.1%;
@@ -111,69 +115,75 @@
     --destructive-foreground: 210 40% 98%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
+    --ring: 222.2 47.4% 11.2%;
 
-    --z-bg-base: #F4F7FB;
+    /* ─── Premium Industrial Light Tokens ──────────────────────────── */
+    --z-bg-base: #F1F4F8;
     --z-bg-surface: #FFFFFF;
-    --z-bg-surface-2: #EDF2F7;
+    --z-bg-surface-2: #F8FAFC;
     --z-bg-surface-3: #E2E8F0;
-    --z-bg-nav: rgba(255, 255, 255, 0.9);
+    --z-bg-nav: rgba(255, 255, 255, 0.95);
     --z-bg-hover: #F1F5F9;
     --z-bg-input: #FFFFFF;
-    --z-bg-shell: #F4F7FB;
+    --z-bg-shell: #F1F4F8;
 
-    --z-border: rgba(15, 23, 42, 0.12);
-    --z-border-medium: rgba(15, 23, 42, 0.18);
-    --z-border-strong: rgba(15, 23, 42, 0.24);
-    --z-border-accent: rgba(37, 99, 235, 0.25);
+    --z-border: rgba(0, 0, 0, 0.08); /* Minimal, sharp */
+    --z-border-medium: rgba(0, 0, 0, 0.14);
+    --z-border-strong: rgba(0, 0, 0, 0.22);
+    --z-border-accent: rgba(0, 0, 0, 0.3);
 
-    --z-text-primary: #0F172A;
+    --z-text-primary: #020617; /* Pure near-black */
     --z-text-secondary: #334155;
     --z-text-muted: #64748B;
     --z-text-dim: #94A3B8;
     --z-text-disabled: #CBD5E1;
 
-    --z-accent: #2563EB;
-    --z-accent-hover: #1D4ED8;
-    --z-accent-dark: #1E40AF;
-    --z-accent-muted: rgba(37, 99, 235, 0.1);
-    --z-accent-glow: rgba(37, 99, 235, 0.2);
+    --z-accent: #0F172A; /* Industrial Obsidian */
+    --z-accent-hover: #1E293B;
+    --z-accent-dark: #000000;
+    --z-accent-muted: rgba(15, 23, 42, 0.06);
+    --z-accent-glow: rgba(15, 23, 42, 0.1);
 
-    --z-teal: #059669;
-    --z-teal-muted: rgba(5, 150, 105, 0.1);
+    --z-teal: #0D9488;
+    --z-teal-muted: rgba(13, 148, 136, 0.1);
     --z-violet: #7C3AED;
-    --z-red: #DC2626;
-    --z-yellow: #D97706;
-    --z-green: #059669;
-    --z-green-bg: rgba(5, 150, 105, 0.1);
-    --z-red-bg: rgba(220, 38, 38, 0.1);
-    --z-yellow-bg: rgba(217, 119, 6, 0.1);
-    --z-green-glow: rgba(5, 150, 105, 0.15);
+    --z-red: #E11D48;
+    --z-yellow: #B45309;
+    --z-green: #0D9488;
+    --z-green-bg: rgba(13, 148, 136, 0.1);
+    --z-red-bg: rgba(225, 29, 72, 0.1);
+    --z-yellow-bg: rgba(180, 83, 9, 0.1);
+    --z-green-glow: rgba(13, 148, 136, 0.15);
 
-    --z-chart-grid: rgba(15, 23, 42, 0.08);
+    --z-chart-grid: rgba(0, 0, 0, 0.05);
     --z-chart-tooltip-bg: #FFFFFF;
-    --z-chart-tooltip-border: rgba(15, 23, 42, 0.15);
+    --z-chart-tooltip-border: rgba(0, 0, 0, 0.12);
 
-    --z-shadow-card: 0 2px 8px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(0, 0, 0, 0.01);
-    --z-shadow-elevated: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
-    --z-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-    --z-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
-    --z-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-    --z-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    --z-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    /* Clean paper-style shadows */
+    --z-shadow-card: 0 1px 1px rgba(0, 0, 0, 0.02), 0 2px 4px rgba(0, 0, 0, 0.02), 0 4px 8px rgba(0, 0, 0, 0.04);
+    --z-shadow-elevated: 0 12px 24px -6px rgba(0, 0, 0, 0.12), 0 4px 12px -4px rgba(0, 0, 0, 0.08);
+    --z-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
+    --z-shadow-md: 0 4px 8px -1px rgba(0, 0, 0, 0.1), 0 2px 6px -2px rgba(0, 0, 0, 0.05);
+    --z-shadow-lg: 0 10px 20px -5px rgba(0, 0, 0, 0.1), 0 8px 12px -6px rgba(0, 0, 0, 0.1);
+    --z-shadow-xl: 0 20px 30px -5px rgba(0, 0, 0, 0.12);
+    --z-shadow-2xl: 0 30px 60px -12px rgba(0, 0, 0, 0.2);
 
-    --z-glow-left: rgba(37, 99, 235, 0.06);
-    --z-glow-right: rgba(16, 185, 129, 0.05);
-    --z-card-highlight: rgba(15, 23, 42, 0.05);
+    --z-glow-left: rgba(0, 0, 0, 0.03);
+    --z-glow-right: rgba(13, 148, 136, 0.02);
+    --z-card-highlight: rgba(0, 0, 0, 0.02);
+
+    --z-noise-opacity: 0.02;
+    --z-noise-blend: multiply;
+    --z-grid-opacity: 0.04;
 
     --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 222 40% 12%;
-    --sidebar-primary: 224 80% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 14% 92%;
-    --sidebar-accent-foreground: 222 40% 12%;
-    --sidebar-border: 220 14% 88%;
-    --sidebar-ring: 224 80% 50%;
+    --sidebar-foreground: 224 71% 4%;
+    --sidebar-primary: 222 47% 11%;
+    --sidebar-primary-foreground: 210 20% 98%;
+    --sidebar-accent: 210 40% 96.1%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214.3 31.8% 91.4%;
+    --sidebar-ring: 221.2 83.2% 53.3%;
   }
 
   html {
@@ -219,13 +229,13 @@ body::before {
   inset: 0;
   z-index: -2;
   background-image: 
-    linear-gradient(to right, var(--z-border) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--z-border) 1px, transparent 1px);
-  background-size: 40px 40px;
+    linear-gradient(to right, var(--z-text-dim) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--z-text-dim) 1px, transparent 1px);
+  background-size: 60px 60px;
   background-position: center center;
-  mask-image: radial-gradient(circle at center, black, transparent 80%);
-  -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
-  opacity: 0.7;
+  mask-image: radial-gradient(circle at center, black, transparent 90%);
+  -webkit-mask-image: radial-gradient(circle at center, black, transparent 90%);
+  opacity: var(--z-grid-opacity);
   pointer-events: none;
 }
 
@@ -236,11 +246,11 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.05;
-  mix-blend-mode: overlay;
+  opacity: var(--z-noise-opacity);
+  mix-blend-mode: var(--z-noise-blend);
   z-index: 9999;
   pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
 
