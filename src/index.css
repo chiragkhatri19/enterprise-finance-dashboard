@@ -117,20 +117,20 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 47.4% 11.2%;
 
-    /* ─── Premium Industrial Light Tokens ──────────────────────────── */
-    --z-bg-base: #E4EBF4;
+    /* ─── Ultra-Clean Light Tokens ──────────────────────────── */
+    --z-bg-base: #F8FAFC; /* Slate 50 - Very clean, contrasts with white cards */
     --z-bg-surface: #FFFFFF;
     --z-bg-surface-2: #F1F5F9;
     --z-bg-surface-3: #E2E8F0;
     --z-bg-nav: rgba(255, 255, 255, 0.95);
     --z-bg-hover: #F1F5F9;
     --z-bg-input: #FFFFFF;
-    --z-bg-shell: #E4EBF4;
+    --z-bg-shell: #F8FAFC;
 
-    --z-border: rgba(0, 0, 0, 0.12); /* Slightly stronger for definition */
-    --z-border-medium: rgba(0, 0, 0, 0.18);
-    --z-border-strong: rgba(0, 0, 0, 0.28);
-    --z-border-accent: rgba(0, 0, 0, 0.4);
+    --z-border: rgba(0, 0, 0, 0.08); /* Crisp visible boundaries */
+    --z-border-medium: rgba(0, 0, 0, 0.12);
+    --z-border-strong: rgba(0, 0, 0, 0.20);
+    --z-border-accent: rgba(0, 0, 0, 0.30);
 
     --z-text-primary: #020617; /* Pure near-black */
     --z-text-secondary: #334155;
@@ -159,8 +159,8 @@
     --z-chart-tooltip-bg: #FFFFFF;
     --z-chart-tooltip-border: rgba(0, 0, 0, 0.12);
 
-    /* Clean paper-style shadows */
-    --z-shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(0, 0, 0, 0.03);
+    /* Classic Clean Shadows */
+    --z-shadow-card: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(0, 0, 0, 0.03);
     --z-shadow-elevated: 0 12px 24px -6px rgba(0, 0, 0, 0.12), 0 4px 12px -4px rgba(0, 0, 0, 0.08);
     --z-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
     --z-shadow-md: 0 4px 8px -1px rgba(0, 0, 0, 0.1), 0 2px 6px -2px rgba(0, 0, 0, 0.05);
@@ -172,9 +172,10 @@
     --z-glow-right: rgba(13, 148, 136, 0.02);
     --z-card-highlight: rgba(0, 0, 0, 0.02);
 
-    --z-noise-opacity: 0.02;
-    --z-noise-blend: multiply;
-    --z-grid-opacity: 0.04;
+    /* Disable global noise and grid in light mode as it muddies pure white cards */
+    --z-noise-opacity: 0;
+    --z-noise-blend: normal;
+    --z-grid-opacity: 0;
 
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 224 71% 4%;
