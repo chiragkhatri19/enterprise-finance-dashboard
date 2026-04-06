@@ -1,0 +1,538 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ─── DARK MODE (default) ──────────────────────────── */
+  :root,
+  .dark {
+    --background: 222 60% 5%;
+    --foreground: 220 60% 97%;
+    --card: 222 42% 9%;
+    --card-foreground: 220 60% 97%;
+    --popover: 222 42% 9%;
+    --popover-foreground: 220 60% 97%;
+    --primary: 224 95% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 162 83% 47%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 35% 11%;
+    --muted-foreground: 220 25% 55%;
+    --accent: 220 35% 11%;
+    --accent-foreground: 220 60% 97%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 20% 16%;
+    --input: 220 20% 16%;
+    --ring: 224 95% 62%;
+    --radius: 0.625rem;
+
+    /* ─── Zorvyn semantic tokens ──────────────────────────── */
+    --z-bg-base: #070B15;
+    --z-bg-surface: #0D1221;
+    --z-bg-surface-2: #111828;
+    --z-bg-surface-3: #162035;
+    --z-bg-nav: #060A14;
+    --z-bg-hover: #141D30;
+    --z-bg-input: #111828;
+    --z-bg-shell: #070B15;
+
+    --z-border: rgba(255,255,255,0.06);
+    --z-border-medium: rgba(255,255,255,0.10);
+    --z-border-strong: rgba(255,255,255,0.16);
+    --z-border-accent: rgba(42,90,214,0.3);
+
+    --z-text-primary: #F0F4FF;
+    --z-text-secondary: #8A9BBF;
+    --z-text-muted: #4A5878;
+    --z-text-dim: #3D5278;
+    --z-text-disabled: #2A3452;
+
+    --z-accent: #3D6EFA;
+    --z-accent-hover: #5580FB;
+    --z-accent-dark: #1E4FA8;
+    --z-accent-muted: rgba(30,79,168,0.12);
+    --z-accent-glow: rgba(30,79,168,0.28);
+
+    --z-teal: #14D9A4;
+    --z-teal-muted: rgba(20,217,164,0.10);
+    --z-violet: #8B7CF8;
+    --z-red: #F05252;
+    --z-yellow: #F59E0B;
+    --z-green: #14D9A4;
+    --z-green-bg: rgba(20,217,164,0.10);
+    --z-red-bg: rgba(240,82,82,0.10);
+    --z-yellow-bg: rgba(245,158,11,0.10);
+    --z-green-glow: rgba(20,217,164,0.20);
+
+    --z-chart-grid: rgba(255,255,255,0.04);
+    --z-chart-tooltip-bg: #162035;
+    --z-chart-tooltip-border: rgba(255,255,255,0.1);
+
+    --z-shadow-card: 0 1px 3px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04);
+    --z-shadow-elevated: 0 8px 40px rgba(0,0,0,0.7);
+    --z-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+    --z-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
+    --z-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -4px rgba(0, 0, 0, 0.5);
+    --z-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.7), 0 8px 10px -6px rgba(0, 0, 0, 0.6);
+    --z-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+
+    --z-glow-left: rgba(61,110,250,0.10);
+    --z-glow-right: rgba(20,217,164,0.07);
+
+    --sidebar-background: 222 50% 8%;
+    --sidebar-foreground: 220 60% 97%;
+    --sidebar-primary: 224 95% 62%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 35% 11%;
+    --sidebar-accent-foreground: 220 60% 97%;
+    --sidebar-border: 220 20% 16%;
+    --sidebar-ring: 224 95% 62%;
+  }
+
+  /* ─── LIGHT MODE ──────────────────────────── */
+  .light {
+    --background: 220 20% 97%;
+    --foreground: 222 40% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 40% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 40% 12%;
+    --primary: 224 80% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 162 60% 40%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 14% 92%;
+    --muted-foreground: 220 15% 46%;
+    --accent: 220 14% 92%;
+    --accent-foreground: 222 40% 12%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 14% 88%;
+    --input: 220 14% 88%;
+    --ring: 224 80% 50%;
+
+    --z-bg-base: #F8FAFC;
+    --z-bg-surface: #FFFFFF;
+    --z-bg-surface-2: #F1F5F9;
+    --z-bg-surface-3: #E2E8F0;
+    --z-bg-nav: rgba(255, 255, 255, 0.8);
+    --z-bg-hover: #F1F5F9;
+    --z-bg-input: #F8FAFC;
+    --z-bg-shell: #F8FAFC;
+
+    --z-border: rgba(15, 23, 42, 0.08);
+    --z-border-medium: rgba(15, 23, 42, 0.12);
+    --z-border-strong: rgba(15, 23, 42, 0.16);
+    --z-border-accent: rgba(37, 99, 235, 0.2);
+
+    --z-text-primary: #0F172A;
+    --z-text-secondary: #475569;
+    --z-text-muted: #94A3B8;
+    --z-text-dim: #CBD5E1;
+    --z-text-disabled: #E2E8F0;
+
+    --z-accent: #2563EB;
+    --z-accent-hover: #3B82F6;
+    --z-accent-dark: #1D4ED8;
+    --z-accent-muted: rgba(37, 99, 235, 0.08);
+    --z-accent-glow: rgba(37, 99, 235, 0.15);
+
+    --z-teal: #10B981;
+    --z-teal-muted: rgba(16, 185, 129, 0.08);
+    --z-violet: #8B5CF6;
+    --z-red: #EF4444;
+    --z-yellow: #F59E0B;
+    --z-green: #10B981;
+    --z-green-bg: rgba(16, 185, 129, 0.08);
+    --z-red-bg: rgba(239, 68, 68, 0.08);
+    --z-yellow-bg: rgba(245, 158, 11, 0.08);
+    --z-green-glow: rgba(16, 185, 129, 0.15);
+
+    --z-chart-grid: rgba(15, 23, 42, 0.06);
+    --z-chart-tooltip-bg: #FFFFFF;
+    --z-chart-tooltip-border: rgba(15, 23, 42, 0.1);
+
+    --z-shadow-card: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+    --z-shadow-elevated: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+    --z-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --z-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    --z-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    --z-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.09), 0 8px 10px -6px rgba(0, 0, 0, 0.06);
+    --z-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+
+    --z-glow-left: rgba(37, 99, 235, 0.06);
+    --z-glow-right: rgba(16, 185, 129, 0.05);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 40% 12%;
+    --sidebar-primary: 224 80% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 92%;
+    --sidebar-accent-foreground: 222 40% 12%;
+    --sidebar-border: 220 14% 88%;
+    --sidebar-ring: 224 80% 50%;
+  }
+
+  html {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sora', sans-serif;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    background: var(--z-bg-base);
+    color: var(--z-text-primary);
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: var(--z-accent-muted);
+    color: var(--z-accent);
+  }
+}
+
+/* ─── App shell atmosphere ──────────────────────────── */
+.app-shell {
+  min-height: 100vh;
+  position: relative;
+  background:
+    radial-gradient(ellipse 55% 60% at 12% 50%, var(--z-glow-left), transparent),
+    radial-gradient(ellipse 50% 55% at 88% 38%, var(--z-glow-right), transparent),
+    var(--z-bg-shell);
+  transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image: 
+    linear-gradient(to right, var(--z-border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--z-border) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center center;
+  mask-image: radial-gradient(circle at center, black, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  z-index: 9999;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+
+/* ─── Mono amounts ──────────────────────────── */
+.font-mono, code, .amount {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ─── Scrollbar ──────────────────────────── */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--z-bg-base); }
+::-webkit-scrollbar-thumb { background: var(--z-border-strong); border-radius: 4px; border: 2px solid var(--z-bg-base); }
+::-webkit-scrollbar-thumb:hover { background: var(--z-text-muted); }
+
+/* ─── Theme transition helpers ──────────────────────────── */
+.theme-transition {
+  transition: 
+    background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Enhanced easing functions ──────────────────────────── */
+.ease-out-expo {
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ease-in-out-quart {
+  transition-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.ease-spring {
+  transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.ease-smooth {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Page transition animations ──────────────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.page-enter {
+  animation: fadeInUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ─── Staggered entrance animations with offsets ──────────────────────────── */
+.stagger-1 { animation-delay: 0ms; }
+.stagger-2 { animation-delay: 50ms; }
+.stagger-3 { animation-delay: 100ms; }
+.stagger-4 { animation-delay: 150ms; }
+.stagger-5 { animation-delay: 200ms; }
+.stagger-6 { animation-delay: 250ms; }
+.stagger-7 { animation-delay: 300ms; }
+.stagger-8 { animation-delay: 350ms; }
+.stagger-9 { animation-delay: 400ms; }
+.stagger-10 { animation-delay: 450ms; }
+
+/* ─── Animation utility classes ──────────────────────────── */
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* ─── Hover lift effect with smooth easing ──────────────────────────── */
+.hover-lift {
+  transition: 
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--z-shadow-lg);
+}
+
+/* ─── Morphing animations ──────────────────────────── */
+@keyframes morphShape {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+}
+
+@keyframes morphPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.morph-shape {
+  animation: morphShape 8s ease-in-out infinite;
+}
+
+.morph-pulse {
+  animation: morphPulse 2s ease-in-out infinite;
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+.shimmer-effect {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* ─── Smart marking indicators ──────────────────────────── */
+.mark-critical {
+  position: relative;
+}
+
+.mark-critical::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background: var(--z-red);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--z-bg-surface), 0 0 8px var(--z-red);
+  animation: morphPulse 1.5s ease-in-out infinite;
+}
+
+.mark-warning {
+  position: relative;
+}
+
+.mark-warning::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background: var(--z-yellow);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--z-bg-surface), 0 0 8px var(--z-yellow);
+}
+
+.mark-success {
+  position: relative;
+}
+
+.mark-success::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 6px;
+  height: 6px;
+  background: var(--z-green);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--z-bg-surface);
+}
+
+/* ─── Interactive state markers ──────────────────────────── */
+.state-active {
+  position: relative;
+  overflow: hidden;
+}
+
+.state-active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.state-active:hover::after {
+  left: 100%;
+}
+
+/* ─── Subtle gradient animation ──────────────────────────── */
+.app-shell::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, var(--z-accent-glow) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, var(--z-green-glow) 0%, transparent 50%);
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: -1;
+  animation: pulse-glow 8s ease-in-out infinite;
+}
+
+/* ─── Morphing background orbs ──────────────────────────── */
+.app-shell::after {
+  content: '';
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  top: 10%;
+  right: -100px;
+  background: radial-gradient(circle, var(--z-accent-muted) 0%, transparent 70%);
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: -1;
+  animation: morphShape 12s ease-in-out infinite;
+  filter: blur(60px);
+}
